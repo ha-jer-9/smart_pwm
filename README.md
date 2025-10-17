@@ -1,45 +1,23 @@
-# Caravel User Neuromorphic X1 Example
+# 🧩 Smart PWM Generator SoC with ReRAM-Based Pattern Storage for Automotive Applications 
 
-This project demonstrates the straightforward integration of a commercial Neuromorphic X1 within the `user_project_wrapper` using the IPM (IP Manager) tool.
+### **Author:** Hadjer Bouyahiaoui   
+### **Project Name:** Smart PWM Generator SoC  
+### **Target Platform:** ChipFoundry Caravel SoC (SKY130)  
+### **Category:** Edge Computing / Automotive / Medical Applications  
+### **License:** Apache 2.0  
 
-## Get Started Quickly
+---
 
-### Follow these steps to set up your environment and harden the Neuromorphic X1:
+## 🧠 Project Overview
 
-1. **Clone the Repository:**
+**Smart PWM Generator SoC** is a system that integrates **Non-Volatile Memory (NVM)** for persistent PWM pattern storage and instant-on operation.  
 
-```
-git clone https://github.com/BMsemi/caravel_user_Neuromorphic_X1_32x32.git
-```
-2. **Prepare Your Environment:**
+This design demonstrates how embedded NVM can enhance system reliability and enable energy-efficient, intelligent control in **automotive**, **medical**, and **edge computing** environments.  
 
-```
-cd caravel_user_Neuromorphic_X1_32x32
-make setup
-```
-3. **Install IPM:**
+At power-up, the SoC automatically retrieves pre-stored PWM duty cycles or waveform patterns from **BM Labs’ ReRAM IP** and drives the outputs accordingly — without requiring external firmware reload or volatile configuration memory.
 
-```
-pip install cf-ipm
-```
-4. **Install the Neuromorphic X1 IP:**
+This approach significantly **reduces initialization time**, **saves power**, and provides **robust recovery** after unexpected resets or power losses.
 
-```
-ipm install Neuromorphic_X1_32x32
-```
+---
 
-5. **Harden the User Project Wrapper:**
-
-```
-make user_project_wrapper
-```
-
-6. **Harden multiple instances of IP:**
-
-```
-Replace content of  /verilog/rtl/user_project_wrapper.v with user_project_wrapper_multi_inst.v
-Replace content of /openlane/user_project_wrapper/config.json with config_multi_inst.json
-make user_project_wrapper
-```
-
-Details about the Neuromorphic X1 IP itself are available in the [Neuromorphic X1 documentation](https://github.com/BMsemi/Neuromorphic_X1_32x32).
+## ⚙️ System Architecture
