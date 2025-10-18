@@ -22,7 +22,7 @@ This approach significantly **reduces initialization time**, **saves power**, an
 
 ## ⚙️ System Architecture
 
-![Abstract_architecture](../docs/smart_pwm_architecture.png)
+![Abstract_architecture](docs/smart_pwm_architecture.png)
 
 
 
